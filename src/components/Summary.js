@@ -107,7 +107,7 @@ const Summary = () => {
         </div>
         :null
     }
-    <OrderPlaced disableStatus={orderSummStatus} orderId={order.id} totalPrice={order.amount}/>
+    <OrderPlaced disableStatus={orderSummStatus} orderId={order?order.id:null} totalPrice={order?order.amount:null}/>
     </> 
   )
 }
