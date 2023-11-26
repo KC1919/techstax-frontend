@@ -46,10 +46,10 @@ const Summary = () => {
           image: "https://example.com/your_logo",
           order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of createOrder().
           handler: function (response) {
-            alert(response.razorpay_payment_id);
-            alert(response.razorpay_order_id);
-            alert(response.razorpay_signature);
+            setOrderBtnStatus(false);
+            setOrderSummStatus(false);
           },
+          "callback_url": "https://techstax-frontend.vercel.app/",
           prefill: {
             name: "Test User",
             email: "test@example.com",
@@ -76,8 +76,6 @@ const Summary = () => {
         });
       
         rzp1.open()
-        setOrderBtnStatus(false);
-        setOrderSummStatus(false);
       };
 
   return (
