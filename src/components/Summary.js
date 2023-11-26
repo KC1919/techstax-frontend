@@ -19,7 +19,7 @@ const Summary = () => {
 
     const createOrder=async (params)=>{
         try {
-            const response=await fetch('http://localhost:5000/placeOrder',{
+            const response=await fetch(`${URL}/placeOrder`,{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'
