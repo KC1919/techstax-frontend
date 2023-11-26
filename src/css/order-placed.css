@@ -6,4 +6,8 @@
     background-color: #f2f2f2;
     padding: 2rem;
     border-radius: 10px;
+    z-index: 1;
+    position: relative;
+    bottom: 500px;
+    left: 0;
 }

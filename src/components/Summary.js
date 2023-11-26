@@ -9,6 +9,8 @@ const Summary = () => {
 
     let order;
 
+    const URL='https://techstax-backend.onrender.com'
+
     const [Razorpay] = useRazorpay();
 
     const [orderBtnStatus, setOrderBtnStatus]=useState(true);
@@ -17,7 +19,7 @@ const Summary = () => {
 
     const createOrder=async (params)=>{
         try {
-            const response=await fetch('https://techstax-backend.onrender.com/placeOrder',{
+            const response=await fetch('http://localhost:5000/placeOrder',{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'
@@ -36,7 +38,7 @@ const Summary = () => {
     }
 
     const handlePayment = async (params) => {
-        order = await createOrder(params); //  Create order on your backend
+        order=await createOrder(params); //  Create order on your backend
         const options = {
           key: "rzp_test_m4B2C0m6b6R1NM", // Enter the Key ID generated from the Dashboard
           amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -46,11 +48,16 @@ const Summary = () => {
           image: "https://example.com/your_logo",
           order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of createOrder().
           handler: function (response) {
-            console.log("In handler");
+            // window.location.reload()
+            // console.log(response);
             setOrderBtnStatus(false);
             setOrderSummStatus(false);
+
+            console.log(orderBtnStatus);
+            console.log(orderSummStatus);
+            // window.location.reload()
           },
-          "callback_url": "https://techstax-frontend.vercel.app/",
+          "callback_url": "http://localhost:3000",
           prefill: {
             name: "Test User",
             email: "test@example.com",
@@ -106,7 +113,7 @@ const Summary = () => {
         </div>
         :null
     }
-    <OrderPlaced disableStatus={orderSummStatus} orderId={order?order.id:null} totalPrice={order?order.amount:null}/>
+    <OrderPlaced disableStatus={orderSummStatus} orderId="7621" totalPrice="1058.65"/>
     </> 
   )
 }
