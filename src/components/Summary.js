@@ -46,6 +46,7 @@ const Summary = () => {
           image: "https://example.com/your_logo",
           order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of createOrder().
           handler: function (response) {
+            console.log("In handler");
             setOrderBtnStatus(false);
             setOrderSummStatus(false);
           },
