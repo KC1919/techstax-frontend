@@ -9,6 +9,7 @@ const OrderPlaced = (props) => {
     const handleClick=()=>{
         console.log("Hello");
         setDisable(true)
+        // window.location.reload()
     }
 
     return (
