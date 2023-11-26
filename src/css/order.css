@@ -1,0 +1,13 @@
+.order-container-div{
+    width: 50%;
+    margin: 5rem auto;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.order-header-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}

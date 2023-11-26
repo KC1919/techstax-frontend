@@ -1,6 +1,7 @@
 .header-container-div {
     width: 80vw;
     margin: 2rem auto;
+    box-shadow: 1px 6px 10px #999999;
 }
 
 .heading-div {
@@ -9,7 +10,7 @@
     text-align: center;
     font-weight: bold;
     font-size: x-large;
-    background: #FFF;
+    /* background: #FFF; */
 }
 
 .delivery-option-div{
@@ -20,7 +21,33 @@
     align-items: center;
 }
 
-.option-btn{
+
+.delivery-option-btn{
     border: 2px;
     border-radius: 10%;
+    background-color: black;
+    color: white;
+    width: 20rem;
+}
+
+.pickup-option-btn{
+    border: 2px;
+    border-radius: 10%;
+    width: 20rem;
+}
+
+.info-div-container{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4rem auto;
+    margin-bottom: 2rem;
+}
+
+.delivery-hours{
+    width: 30%;
+    margin: 2rem auto;
+    margin-bottom: 3rem;
+    text-align: center;
 }

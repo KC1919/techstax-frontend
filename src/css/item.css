@@ -1,0 +1,22 @@
+.item-container-div{
+    width: 50%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-name-div{
+    max-width: 50%;
+    text-align: left;
+}
+
+.item-price-div{
+    max-width: 40%;
+    text-align: right;
+}
