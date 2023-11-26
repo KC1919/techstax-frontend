@@ -4,14 +4,17 @@ import './../css/order-placed.css'
 
 const OrderPlaced = (props) => {
 
+    const [disable,setDisable]=useState(false);
+
     const handleClick=()=>{
-        props.disableStatus=true;
+        console.log("Hello");
+        setDisable(true)
     }
 
     return (
         <>
             {
-                props.disableStatus === true ?
+                props.disableStatus === false && disable===false ?
                     <div className='order-paced-container-div'>
                         <div style={{ textAlign: 'left' }}>
                             <h6 style={{ fontSize: '15px' }}>Order has been placed successfully. <br /> Confirmation message sent!</h6>
