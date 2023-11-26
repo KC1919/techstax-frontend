@@ -14,6 +14,5 @@ root.render(
     <Header/>
     <Order/>
     <Summary/>
-    <OrderPlaced disableStatus={true} orderId="3267" totalPrice="1058.65"/>
   </React.StrictMode>
 );

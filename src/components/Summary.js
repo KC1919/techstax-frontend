@@ -3,12 +3,17 @@ import { useState } from 'react';
 import useRazorpay from "react-razorpay";
 import './../css/summary.css'
 import Item from './Item'
+import OrderPlaced from './OrderPlaced';
 
 const Summary = () => {
+
+    let order;
 
     const [Razorpay] = useRazorpay();
 
     const [orderBtnStatus, setOrderBtnStatus]=useState(true);
+
+    const [orderSummStatus, setOrderSummStatus]=useState(true);
 
     const createOrder=async (params)=>{
         try {
@@ -31,7 +36,7 @@ const Summary = () => {
     }
 
     const handlePayment = async (params) => {
-        const order = await createOrder(params); //  Create order on your backend
+        order = await createOrder(params); //  Create order on your backend
         const options = {
           key: "rzp_test_m4B2C0m6b6R1NM", // Enter the Key ID generated from the Dashboard
           amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -72,6 +77,7 @@ const Summary = () => {
       
         rzp1.open()
         setOrderBtnStatus(false);
+        setOrderSummStatus(false);
       };
 
   return (
@@ -101,6 +107,7 @@ const Summary = () => {
         </div>
         :null
     }
+    <OrderPlaced disableStatus={orderSummStatus} orderId={order.id} totalPrice={order.amount}/>
     </> 
   )
 }
