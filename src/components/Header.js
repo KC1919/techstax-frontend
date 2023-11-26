@@ -6,8 +6,8 @@ const Header = () => {
     <div className='header-container-div'>
         <div className='heading-div'>TSX PIZZERIAS</div>
         <div className='delivery-option-div'>
-            <div className='option-div'><button className='btn btn-sm delivery-option-btn'>Delivery</button></div>
-            <div className='option-div'><button className='btn btn-sm pickup-option-btn'>Pickup</button></div>
+            <div className='option-div'><button className='delivery-option-btn'>Delivery</button></div>
+            <div className='option-div'><button className='pickup-option-btn'>Pickup</button></div>
         </div>
         <div className='info-div-container'>
             <h6>25 mins</h6>
