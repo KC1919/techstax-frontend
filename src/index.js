@@ -5,6 +5,7 @@ import App from './App';
 import Header from './components/Header';
 import Order from './components/Order';
 import Summary from './components/Summary';
+import OrderPlaced from './components/OrderPlaced';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,5 +14,6 @@ root.render(
     <Header/>
     <Order/>
     <Summary/>
+    <OrderPlaced disableStatus={true} orderId="3267" totalPrice="1058.65"/>
   </React.StrictMode>
 );
