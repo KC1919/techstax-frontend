@@ -14,40 +14,54 @@
 }
 
 .delivery-option-div{
-    width: 100%;
+    width: 25%;
     margin: 2rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.option-div{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 240px) {
+    .option-div{
+        width: 130%;
+    }
+  }
 
 .delivery-option-btn{
     border-radius: 10px;
     background-color: black;
     color: white;
-    max-width: 20rem;
-    padding: 0 5rem;
+    /* max-width: 20rem; */
+    padding: 0 4.2rem;
 }
 
 .pickup-option-btn{
-    max-width: 100%;
     border-radius: 10px;
-    max-width: 20rem;
-    padding: 0 5rem;
+    padding: 0 4.2rem;
+    /* max-width: 20rem; */
 }
 
 .info-div-container{
-    width: 30%;
+    width: 60%;
+    min-width: 30%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 4rem auto;
     margin-bottom: 2rem;
 }
 
 .delivery-hours{
-    width: 30%;
+    width: 40%;
+    min-width: 30%;
     margin: 2rem auto;
     margin-bottom: 3rem;
     text-align: center;

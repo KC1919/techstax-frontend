@@ -103,8 +103,8 @@ const Summary = () => {
         <hr />
 
         <div className='total-div'>
-            <p style={{fontSize:'x-large', fontWeight:'bolder'}}>Total</p>
-            <p style={{fontSize:'large', fontWeight:'bolder'}}>Rs 1058.65</p>
+            <p style={{fontSize:'x-large', fontWeight:'bolder', marginRight:'1rem'}}>Total</p>
+            <p style={{fontSize:'large', fontWeight:'bolder', marginLeft:'1rem'}}>Rs 1058.65</p>
         </div>
 
     { orderBtnStatus===true?
